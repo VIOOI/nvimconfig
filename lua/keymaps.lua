@@ -1,4 +1,3 @@
-
 local function map(mode, lhs, rhs, opts)
   local options = {noremap = true}
   if opts then options = vim.tbl_extend('force', options, opts) end
@@ -41,9 +40,9 @@ map('n', '<C-t>f', ':tabfirst<CR>')
 
 map('n', '<C-f>h', ':lua require("telescope.builtin").help_tags()<cr>', {noremap = false})
 map('n', '<C-f>f', ':lua require("telescope.builtin").find_files()<cr>', {noremap = false})
-map('n', '<C-f>r', ':lua require("telescope.builtin").live_grep()<cr>', {noremap = false})
+map('n', '<C-f>R', ':lua require("telescope.builtin").live_grep()<cr>', {noremap = false})
 map('n', '<C-f>b', ':lua require("telescope.builtin").buffers()<cr>', {noremap = false})
-map('n', '<C-f>R', ':FloatermNew ranger<cr>', {noremap = false})
+map('n', '<C-f>r', ':Ranger<cr>', {noremap = false})
 
 map('n', '<C-f>v', ':ToggleTerm size=80 direction=vertical<cr>', {noremap = false})
 map('n', '<C-f>h', ':ToggleTerm size=15 direction=horizontal<cr>', {noremap = false})
@@ -55,3 +54,17 @@ map('n', 'zs', ':setlocal foldmethod=syntax<CR>')
 map('n', 'ze', ':setlocal foldmethod=expr<CR>')
 map('n', 'zk', ':setlocal foldmethod=marker<CR>')
 map('n', 'zd', ':setlocal foldmethod=diff<CR>')
+
+map("n", "gdx", ":Trouble<cr>", {silent = true, noremap = true})
+map("n", "gdw", ":Trouble workspace_diagnostics<cr>", {silent = true, noremap = true})
+map("n", "gdd", ":Trouble document_diagnostics<cr>", {silent = true, noremap = true})
+map("n", "gdl", ":Trouble loclist<cr>", {silent = true, noremap = true})
+map("n", "gdq", ":Trouble quickfix<cr>", {silent = true, noremap = true})
+map("n", "gdR", ":Trouble lsp_references<cr>", {silent = true, noremap = true})
+
+map('v', '<C-h>', '<Plug>(MvVisLeft)', {silent = true, noremap = true})
+map('v', '<C-j>', '<Plug>(MvVisDown)', {silent = true, noremap = true})
+map('v', '<C-k>', '<Plug>(MvVisUp)', {silent = true, noremap = true})
+map('v', '<C-l>', '<Plug>(MvVisRight)', {silent = true, noremap = true})
+
+map('n', '<C-r>', '<Plug>RestNvimPreview', {silent = true, noremap = true})

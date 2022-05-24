@@ -1,8 +1,8 @@
 require('hardline').setup {
-  bufferline = false,  -- enable bufferline
+  bufferline = true,  -- enable bufferline
   bufferline_settings = {
     exclude_terminal = false,  -- don't show terminal buffers in bufferline
-    show_index = false,        -- show buffer indexes (not the actual buffer numbers) in bufferline
+    show_index = true,        -- show buffer indexes (not the actual buffer numbers) in bufferline
   },
   theme = 'default',   -- change theme
   sections = {         -- define sections

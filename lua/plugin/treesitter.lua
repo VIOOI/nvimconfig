@@ -1,7 +1,7 @@
 require'nvim-treesitter.configs'.setup {
   -- One of "all", "maintained" (parsers with maintainers), or a list of languages
   ensure_installed = {
-		"javascript", "tsx", "prisma", "json",
+		"javascript", "typescript", "prisma", "json",
 		"html", "scss",
 		"lua",
   },
